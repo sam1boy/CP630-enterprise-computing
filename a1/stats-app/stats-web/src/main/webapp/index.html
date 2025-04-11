@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Web Application</title>
+</head>
+<body>
+    <h1>Stats Web Application</h1>
+    
+    <h2>Add Data to Statistics</h2>
+    <form action="/stats-web/add-data" method="GET">
+        <label for="singletonValue">Value: </label>
+        <input type="text" id="singletonValue" name="value">
+        <button type="submit">Add Data</button>
+    </form>
+
+    <h2>Get Statistics</h2>
+    <form action="/stats-web/get" method="GET">
+        <label for="statelessQuery">Options:</label>
+        <select id="statelessQuery" name="value">
+            <option value="" selected disabled>Select an Option</option>
+            <option value="count">Count</option>
+            <option value="min">Minimum</option>
+            <option value="max">Maximum</option>
+            <option value="mean">Mean</option>
+            <option value="std">Standard Deviation</option>
+            <option value="summary">Summary</option>
+        </select>
+        <button type="submit">Get Statistics</button>
+    </form>
+
+    <h2>Insert Data to Statistics</h2>
+    <form action="/stats-web/insert-data" method="GET">
+        <label for="statefulValue">Value: </label>
+        <input type="text" id="statefulValue" name="value">
+        <button type="submit">Insert Data</button>
+    </form>
+</body>
+</html>

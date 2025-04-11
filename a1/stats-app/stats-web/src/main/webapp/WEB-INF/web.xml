@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app> 
+  <display-name>Stats Web Application</display-name>
+
+  <servlet> 
+    <servlet-name>StatsSingletonServlet</servlet-name> 
+    <servlet-class>ec.stats.StatsSingletonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping> 
+    <servlet-name>StatsSingletonServlet</servlet-name> 
+    <url-pattern>/add-data</url-pattern> 
+  </servlet-mapping>
+  <servlet> 
+    <servlet-name>StatsStatefulServlet</servlet-name> 
+    <servlet-class>ec.stats.StatsStatefulServlet</servlet-class>
+  </servlet>
+  <servlet-mapping> 
+    <servlet-name>StatsStatelessServlet</servlet-name> 
+    <url-pattern>/get</url-pattern> 
+  </servlet-mapping>
+  <servlet-mapping> 
+    <servlet-name>StatsStatefulServlet</servlet-name> 
+    <url-pattern>/insert-data</url-pattern> 
+  </servlet-mapping>
+  <servlet> 
+    <servlet-name>StatsStatelessServlet</servlet-name> 
+    <servlet-class>ec.stats.StatsStatelessServlet</servlet-class>
+  </servlet>
+</web-app>

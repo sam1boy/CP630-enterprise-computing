@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ec.asgmt</groupId>
+    <artifactId>stats-app</artifactId>
+    <version>0.1.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <packaging>war</packaging> 
+  <artifactId>stats-web</artifactId>
+  <name>stats-web</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+      <!-- JBoss EJB API -->
+      <dependency>
+          <groupId>org.jboss.spec.javax.ejb</groupId>
+          <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+          <scope>provided</scope>
+      </dependency>
+
+      <!-- JBoss Servlet API -->
+      <dependency>
+          <groupId>org.jboss.spec.javax.servlet</groupId>
+          <artifactId>jboss-servlet-api_4.0_spec</artifactId>
+          <scope>provided</scope>
+      </dependency>
+
+      <!-- EC-EJB Dependency -->
+      <dependency>
+          <groupId>ec.asgmt</groupId>
+          <artifactId>stats-ejb</artifactId>
+          <version>0.1.0</version>
+
+        <scope>provided</scope>
+
+      </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version> <!-- Use a modern version -->
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

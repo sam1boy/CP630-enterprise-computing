@@ -1,0 +1,52 @@
+
+C:\enterprise\workspace\a1>rem A1 batch test 
+
+C:\enterprise\workspace\a1>echo A1 batch test 
+A1 batch test
+
+C:\enterprise\workspace\a1>echo username:samib 
+username:samib
+
+C:\enterprise\workspace\a1>echo CD 
+CD
+
+C:\enterprise\workspace\a1>cd stats-mvn 
+
+C:\enterprise\workspace\a1\stats-mvn>call mvn clean -q 
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running StatisticsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+count:10000
+min:1.0
+max:10000.0
+mean:5000.5
+STD:2886.751331514372
+count:10000
+min:1.0
+max:10000.0
+mean:5000.5
+STD:2886.751331514372
+Sat Feb 01 17:26:37 EST 2025<br>
+Add data: <br>
+Value: 10.0<br>
+Count: 1<br>
+Sat Feb 01 17:26:37 EST 2025<br>
+Inserted value: 10.0<br>
+Count: 2<br>
+Min: 10.0<br>
+Max: 10.0<br>
+Mean: 10.0<br>
+STD: 0.0<br>
+
+Sat Feb 01 17:26:37 EST 2025<br>
+Statistics: <br>
+Count: 2<br>
+END
